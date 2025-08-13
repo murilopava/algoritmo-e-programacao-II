@@ -12,12 +12,14 @@ Este repositório contém soluções de exercícios e trabalhos desenvolvidos du
 
 A organização dos arquivos segue a divisão de conteúdos trabalhados em aula e/ou por semana:
 
+```
 📁 src/
 ├── aula-001/
-│ └── exercicio_1.cpp
+│   └── exercicio_1.cpp
 ├── aula-002/
-│ ├── exercicio_1.cpp
-│ └── exercicio_2.cpp
+│   ├── exercicio_1.cpp
+│   └── exercicio_2.cpp
 ...
+```
 
 > Obs.: A estrutura pode mudar conforme o andamento da disciplina.
