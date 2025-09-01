@@ -27,14 +27,16 @@ void somarHorario(Horario tempo1, Horario tempo2){
         somaMin -= 120;
     } else if(somaMin >= 60){
         somaHora += 1;
-        somaMin += 60;
+        somaMin -= 60;
     }
 
     somaHora += tempo1.hora + tempo2.hora;
     if(somaHora >= 48){
         dia += 2;
+        somaHora -= 48;
     } else if(somaHora >= 24)
         dia += 1;
+        somaHora -= 24;
 
     cout << "Dia:" << dia << " Hora:" << somaHora << " Minutos:" << somaMin << " Segundos:" << somaSeg;
 }
