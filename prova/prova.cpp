@@ -15,25 +15,25 @@ struct Item {
     }
 
     void InsertAt(int pos, int newValor) {
-        if (pos == 1) {
-            Item* novo = new Item;
-            novo->valor = newValor;
-            novo->proximo = proximo;
-            proximo = novo;
-        } else if (proximo != nullptr) {
-            proximo->InsertAt(pos - 1, newValor);
-        } else {
-            cout << "Posição invalida!\n";
-        }
+    if (pos == 0) {
+        Item* novo = new Item;
+        novo->valor = newValor;
+        novo->proximo = proximo;
+        proximo = novo;
+    } else if (proximo != nullptr) {
+        proximo->InsertAt(pos - 1, newValor);
+    } else {
+        cout << "Posicao invalida!\n";
+    }
     }
 
     void RemoveAt(int pos) {
         if (proximo == nullptr) {
-            cout << "Posição invalida!\n";
+            cout << "Posicao invalida!\n";
             return;
         }
 
-        if (pos == 1) {
+        if (pos == 0) {
             Item* temp = proximo;
             proximo = proximo->proximo;
             delete temp;
@@ -48,7 +48,7 @@ struct Item {
         } else if (proximo != nullptr) {
             proximo->MostrarPosicao(pos - 1);
         } else {
-            cout << "Posição invalida!\n";
+            cout << "Posicao invalida!\n";
         }
     }
 
@@ -87,7 +87,7 @@ struct ListaInteiro {
 
     void addPosicao(int pos, int valor) {
         if (pos < 0 || pos > qt) {
-            cout << "Posição invalida!\n";
+            cout << "Posicao invalida!\n";
             return;
         }
 
@@ -104,7 +104,7 @@ struct ListaInteiro {
 
     void removerItem(int pos) {
         if (primeiroItem == nullptr || pos < 0 || pos >= qt) {
-            cout << "Posição invalida!\n";
+            cout << "Posicao invalida!\n";
             return;
         }
 
